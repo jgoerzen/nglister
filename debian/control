@@ -2,7 +2,7 @@ Source: nglister
 Section: news
 Priority: optional
 Maintainer: John Goerzen <jgoerzen@complete.org>
-Build-Depends: debhelper (>> 3.0.0), python-dev
+Build-Depends-Indep: debhelper (>> 3.0.0), python-dev
 Standards-Version: 3.5.8
 
 Package: nglister
