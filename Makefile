@@ -19,6 +19,7 @@ SHELL=/bin/bash
 clean:
 	-rm -f `find . -name "*~"`
 	-rm -f `find . -name "*.tmp"`
+	-python setup.py clean --all
 	-rm -f nglisterc
 	-rm -f `find . -name "*.pyc"`
 	-rm -f `find . -name "*.pygc"`
