@@ -1,0 +1,43 @@
+------------------------------------------------------------------------
+rev 5:  jgoerzen | 2003-02-12 10:27:22 -0600 (Wed, 12 Feb 2003) | 2 lines
+Changed paths:
+   M /nglister/head/nglister
+
+Working!
+
+------------------------------------------------------------------------
+rev 4:  jgoerzen | 2003-02-12 10:23:58 -0600 (Wed, 12 Feb 2003) | 2 lines
+Changed paths:
+   A /nglister/head/nglister
+
+Added
+
+------------------------------------------------------------------------
+rev 3:  jgoerzen | 2003-02-12 10:11:08 -0600 (Wed, 12 Feb 2003) | 3 lines
+Changed paths:
+   A /nglister/head/COPYRIGHT
+   A /nglister/head/Makefile
+   A /nglister/head/nglister.sgml
+
+Added COPYRIGHT.
+Added Makefile, nglister.sgml from examples in OfflineIMAP.
+
+------------------------------------------------------------------------
+rev 2:  jgoerzen | 2003-02-12 10:09:09 -0600 (Wed, 12 Feb 2003) | 2 lines
+Changed paths:
+   A /nglister/head/COPYING
+
+Added.
+
+------------------------------------------------------------------------
+rev 1:  jgoerzen | 2003-02-12 10:07:23 -0600 (Wed, 12 Feb 2003) | 2 lines
+Changed paths:
+   A /nglister
+   A /nglister/branches
+   A /nglister/head
+   A /nglister/releases
+   A /nglister/tags
+
+Added initial directory structure for nglister
+
+------------------------------------------------------------------------

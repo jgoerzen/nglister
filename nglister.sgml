@@ -58,10 +58,18 @@
       </para>
 
       <para>to the end of your command-line.</para>
-
-      <para>&NGLister; requires only one piece of optional software:
+    </refsect1>
+    <refsect1>
+      <title>Installation</title>
+      <para>To install &NGLister;, you will need a current version of
+	<ulink url="http://www.python.org/">Python</ulink>.
+	  &NGLister; requires only one other piece of software:
 	Optik.  You can find it at
 	<ulink url="http://prdownloads.sourceforge.net/optik/Optik-1.3.tar.gz"></ulink>.
+      </para>
+
+      <para>
+	To install, run this command as root: <command>python setup.py install</command>
       </para>
     </refsect1>
     
