@@ -1,0 +1,52 @@
+#!/usr/bin/env python
+# -*- Mode: Python; -*-
+# Copyright (C) 2002, 2003 John Goerzen
+# <jgoerzen@complete.org>
+#
+#    This program is free software; you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation; either version 2 of the License, or
+#    (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License
+#    along with this program; if not, write to the Free Software
+#    Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+
+rev = '$Rev$'
+version = '0.99.0'
+
+import sys, nntplib
+from optik import OptionParser
+
+usage = """
+   USAGE: nglister [-u username] [-p password] [-P port] hostname file
+   """
+
+parser = OptionParser(usage = usage)
+parder.add_option('-u', action="store", type="string", dest="username",
+                  help="Specify a username for logging into NNTP server")
+parser.add_option('-p', action="store", type="string", dest="password",
+                  help="Specify a password for logging into NNTP server")
+parser.add_option('-P', action="store", type="string", dest="port",
+                  help="Specify a port for NNTP server", default="nntp")
+
+(options, args) = parser.parse_args()
+
+try:
+    hostname = args[0]
+    filename = args[1]
+except IndexError:
+    parser.print_help()
+    sys.exit(255)
+
+# OK, ready to go.
+
+s = nntplib.NNTP(hostname, options.port, options.username, options.password,
+                 1)
+(response, results) = s.longcmd("LIST " + filename)
+print "\n".join(results)
