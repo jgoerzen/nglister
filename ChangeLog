@@ -1,4 +1,123 @@
 ------------------------------------------------------------------------
+rev 14:  jgoerzen | 2003-02-12 11:15:19 -0600 (Wed, 12 Feb 2003) | 2 lines
+Changed paths:
+   M /nglister/head/debian/changelog
+   M /nglister/head/debian/control
+   M /nglister/head/debian/rules
+
+Touched up some packaging.
+
+------------------------------------------------------------------------
+rev 13:  jgoerzen | 2003-02-12 11:13:13 -0600 (Wed, 12 Feb 2003) | 2 lines
+Changed paths:
+   M /nglister/head/debian/changelog
+   M /nglister/head/debian/control
+   M /nglister/head/debian/copyright
+   M /nglister/head/debian/dirs
+   M /nglister/head/debian/docs
+   M /nglister/head/debian/rules
+
+Updated for first try at Debian packaging.
+
+------------------------------------------------------------------------
+rev 12:  jgoerzen | 2003-02-12 11:08:37 -0600 (Wed, 12 Feb 2003) | 2 lines
+Changed paths:
+   D /nglister/head/debian/README.Debian
+   D /nglister/head/debian/conffiles.ex
+   D /nglister/head/debian/ex.package.doc-base
+   D /nglister/head/debian/init.d.ex
+
+Removed more unneeded files
+
+------------------------------------------------------------------------
+rev 11:  jgoerzen | 2003-02-12 11:08:19 -0600 (Wed, 12 Feb 2003) | 2 lines
+Changed paths:
+   D /nglister/head/debian/cron.d.ex
+   D /nglister/head/debian/emacsen-install.ex
+   D /nglister/head/debian/emacsen-remove.ex
+   D /nglister/head/debian/emacsen-startup.ex
+   D /nglister/head/debian/manpage.1.ex
+   D /nglister/head/debian/manpage.sgml.ex
+   D /nglister/head/debian/menu.ex
+   D /nglister/head/debian/postinst.ex
+   D /nglister/head/debian/postrm.ex
+   D /nglister/head/debian/preinst.ex
+   D /nglister/head/debian/prerm.ex
+   D /nglister/head/debian/watch.ex
+
+Removed unneeded example files
+
+------------------------------------------------------------------------
+rev 10:  jgoerzen | 2003-02-12 11:07:39 -0600 (Wed, 12 Feb 2003) | 2 lines
+Changed paths:
+   A /nglister/head/debian
+   A /nglister/head/debian/README.Debian
+   A /nglister/head/debian/changelog
+   A /nglister/head/debian/conffiles.ex
+   A /nglister/head/debian/control
+   A /nglister/head/debian/copyright
+   A /nglister/head/debian/cron.d.ex
+   A /nglister/head/debian/dirs
+   A /nglister/head/debian/docs
+   A /nglister/head/debian/emacsen-install.ex
+   A /nglister/head/debian/emacsen-remove.ex
+   A /nglister/head/debian/emacsen-startup.ex
+   A /nglister/head/debian/ex.package.doc-base
+   A /nglister/head/debian/init.d.ex
+   A /nglister/head/debian/manpage.1.ex
+   A /nglister/head/debian/manpage.sgml.ex
+   A /nglister/head/debian/menu.ex
+   A /nglister/head/debian/postinst.ex
+   A /nglister/head/debian/postrm.ex
+   A /nglister/head/debian/preinst.ex
+   A /nglister/head/debian/prerm.ex
+   A /nglister/head/debian/rules
+   A /nglister/head/debian/watch.ex
+
+Added initial files from dh_make
+
+------------------------------------------------------------------------
+rev 9:  jgoerzen | 2003-02-12 11:05:59 -0600 (Wed, 12 Feb 2003) | 2 lines
+Changed paths:
+   M /nglister/head/manual.html
+   M /nglister/head/manual.pdf
+   M /nglister/head/manual.ps
+   M /nglister/head/manual.txt
+   M /nglister/head/nglister.1
+
+Rebuilt docs
+
+------------------------------------------------------------------------
+rev 8:  jgoerzen | 2003-02-12 11:05:35 -0600 (Wed, 12 Feb 2003) | 3 lines
+Changed paths:
+   A /nglister/head/ChangeLog
+   M /nglister/head/nglister.sgml
+
+Added the ChangeLog
+Updated docs with install info
+
+------------------------------------------------------------------------
+rev 7:  jgoerzen | 2003-02-12 11:04:43 -0600 (Wed, 12 Feb 2003) | 2 lines
+Changed paths:
+   M /nglister/head/Makefile
+   A /nglister/head/setup.py
+
+Added setup.py
+
+------------------------------------------------------------------------
+rev 6:  jgoerzen | 2003-02-12 11:00:52 -0600 (Wed, 12 Feb 2003) | 2 lines
+Changed paths:
+   M /nglister/head/Makefile
+   A /nglister/head/manual.html
+   A /nglister/head/manual.pdf
+   A /nglister/head/manual.ps
+   A /nglister/head/manual.txt
+   A /nglister/head/nglister.1
+   M /nglister/head/nglister.sgml
+
+Added documentation files; wrote documentation.
+
+------------------------------------------------------------------------
 rev 5:  jgoerzen | 2003-02-12 10:27:22 -0600 (Wed, 12 Feb 2003) | 2 lines
 Changed paths:
    M /nglister/head/nglister
