@@ -17,10 +17,9 @@
 SHELL=/bin/bash
 
 clean:
-	-python2.2 setup.py clean --all
 	-rm -f `find . -name "*~"`
 	-rm -f `find . -name "*.tmp"`
-	-rm -f bin/offlineimapc
+	-rm -f nglisterc
 	-rm -f `find . -name "*.pyc"`
 	-rm -f `find . -name "*.pygc"`
 	-rm -f `find . -name "*.class"`
@@ -35,12 +34,11 @@ changelog:
 	svn log -v > ChangeLog
 
 docs:
-	docbook2man offlineimap.sgml
-	docbook2man offlineimap.sgml
-	docbook2html -u offlineimap.sgml
-	mv offlineimap.html manual.html
-	man -t -l offlineimap.1 > manual.ps
+	docbook2man nglister.sgml
+	docbook2man nglister.sgml
+	docbook2html -u nglister.sgml
+	mv nglister.html manual.html
+	man -t -l nglister.1 > manual.ps
 	ps2pdf manual.ps
-	groff -Tascii -man offlineimap.1 | sed $$'s/.\b//g' > manual.txt
+	groff -Tascii -man nglister.1 | sed $$'s/.\b//g' > manual.txt
 	-rm manpage.links manpage.refs
-

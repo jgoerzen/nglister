@@ -1,0 +1,415 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML
+><HEAD
+><TITLE
+>NGLister Manual</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.77+"></HEAD
+><BODY
+CLASS="REFERENCE"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="REFERENCE"
+><A
+NAME="AEN1"
+></A
+><DIV
+CLASS="TITLEPAGE"
+><H1
+CLASS="TITLE"
+>I. NGLister Manual</H1
+><DIV
+CLASS="TOC"
+><DL
+><DT
+><B
+>Table of Contents</B
+></DT
+><DT
+><A
+HREF="#AEN3"
+>nglister</A
+>&nbsp;--&nbsp;Tool to download newsgroup information from news servers
+      </DT
+></DL
+></DIV
+></DIV
+><H1
+><A
+NAME="AEN3"
+></A
+>nglister</H1
+><DIV
+CLASS="REFNAMEDIV"
+><A
+NAME="AEN15"
+></A
+><H2
+>Name</H2
+>NGLister&nbsp;--&nbsp;Tool to download newsgroup information from news servers
+      </DIV
+><DIV
+CLASS="REFSYNOPSISDIV"
+><A
+NAME="AEN18"
+></A
+><H2
+>Synopsis</H2
+><P
+><B
+CLASS="COMMAND"
+>nglister</B
+>  [-u <TT
+CLASS="REPLACEABLE"
+><I
+>username</I
+></TT
+>] [-p <TT
+CLASS="REPLACEABLE"
+><I
+>password</I
+></TT
+>] [-P <TT
+CLASS="REPLACEABLE"
+><I
+>port</I
+></TT
+>]  <TT
+CLASS="REPLACEABLE"
+><I
+>hostname</I
+></TT
+>   <TT
+CLASS="REPLACEABLE"
+><I
+>filename</I
+></TT
+> </P
+><P
+><B
+CLASS="COMMAND"
+>nglister</B
+>   -h | --help </P
+></DIV
+><DIV
+CLASS="REFSECT1"
+><A
+NAME="AEN36"
+></A
+><H2
+>Description</H2
+><P
+><SPAN
+CLASS="APPLICATION"
+>NGLister</SPAN
+> is a tool to download information about
+	groups and other information available on an NNTP (Usenet
+	news) server.  It is designed to be fast and simple;
+	just specify the server and the information you want,
+	and <SPAN
+CLASS="APPLICATION"
+>NGLister</SPAN
+> will send it to standard output.
+      </P
+><P
+>You can write the information to a file by appending:</P
+><P
+><B
+CLASS="COMMAND"
+>&gt; <TT
+CLASS="REPLACEABLE"
+><I
+>filename</I
+></TT
+></B
+>
+      </P
+><P
+>to the end of your command-line.</P
+><P
+><SPAN
+CLASS="APPLICATION"
+>NGLister</SPAN
+> requires only one piece of optional software:
+	Optik.  You can find it at
+	<A
+HREF="http://prdownloads.sourceforge.net/optik/Optik-1.3.tar.gz"
+TARGET="_top"
+>http://prdownloads.sourceforge.net/optik/Optik-1.3.tar.gz</A
+>.
+      </P
+></DIV
+><DIV
+CLASS="REFSECT1"
+><A
+NAME="AEN49"
+></A
+><H2
+>Options</H2
+><P
+></P
+><DIV
+CLASS="VARIABLELIST"
+><DL
+><DT
+>-u <TT
+CLASS="REPLACEABLE"
+><I
+>username</I
+></TT
+></DT
+><DD
+><P
+>Specifies the user name to use for logging into
+	    the server.  Use this only if your server requires authentication.
+	  </P
+></DD
+><DT
+>-p <TT
+CLASS="REPLACEABLE"
+><I
+>password</I
+></TT
+></DT
+><DD
+><P
+>Specifies the password to use for logging into
+	    the server.  Use this only if your server requires a password.
+	  </P
+></DD
+><DT
+>-P <TT
+CLASS="REPLACEABLE"
+><I
+>port</I
+></TT
+></DT
+><DD
+><P
+>Specifies the numeric port to use when connecting.
+	    Most servers listen on port 119, the default NNTP port,
+	    so that value is used by the default.  This option will
+	    only be needed rarely.
+	  </P
+></DD
+><DT
+><TT
+CLASS="REPLACEABLE"
+><I
+>hostname</I
+></TT
+></DT
+><DD
+><P
+>Specifies the name of the NNTP server.
+	  </P
+></DD
+><DT
+><TT
+CLASS="REPLACEABLE"
+><I
+>filename</I
+></TT
+></DT
+><DD
+><P
+>Specifies the name of the data to retrieve
+	    from the remote NNTP server.  Most people will use
+	    <TT
+CLASS="FILENAME"
+>active</TT
+> or
+	    <TT
+CLASS="FILENAME"
+>newsgroups</TT
+> here.  The set of files
+	    supported varies from one server to the next.  Please
+	    note that this parameter does <SPAN
+CLASS="emphasis"
+><I
+CLASS="EMPHASIS"
+>not</I
+></SPAN
+>
+	    denote an output filename or even a real filename; just
+	    the type of information you want from the server.
+	    Here is a list of commonly-supported information types.
+	    Additional items are specified in
+	    <A
+HREF="http://www.ietf.org/rfc/rfc2980.txt"
+TARGET="_top"
+>RFC2980</A
+>
+	    with the LIST command.
+
+	    </P
+><P
+></P
+><UL
+><LI
+><P
+><TT
+CLASS="FILENAME"
+>active</TT
+> lists
+		all newsgroups and describes their numbering.</P
+></LI
+><LI
+><P
+><TT
+CLASS="FILENAME"
+>newsgroups</TT
+> lists
+		the newsgroup descriptions.  Note that most servers
+		do not carry descriptions for all groups, and the groups
+		that lack a description will not be listed here at all.
+	      </P
+></LI
+><LI
+><P
+><TT
+CLASS="FILENAME"
+>active.times</TT
+> describes
+		how recently each newsgroup has seen activity.
+	      </P
+></LI
+><LI
+><P
+><TT
+CLASS="FILENAME"
+>motd</TT
+> shows the server's
+		"Message Of The Day" -- that is, current news about the
+		server.
+	      </P
+></LI
+></UL
+></DD
+><DT
+>-h, --help</DT
+><DD
+><P
+>Displays brief usage help.</P
+></DD
+></DL
+></DIV
+></DIV
+><DIV
+CLASS="REFSECT1"
+><A
+NAME="AEN99"
+></A
+><H2
+>Conforming To</H2
+><P
+></P
+><UL
+><LI
+><P
+>Network News Transport Protocol as specified in RFC 977</P
+></LI
+><LI
+><P
+>Common NNTP Extensions as specified in RFC 2980</P
+></LI
+><LI
+><P
+>Standard Python 2.2.1 as implemented on POSIX-compliant systems.</P
+></LI
+></UL
+></DIV
+><DIV
+CLASS="REFSECT1"
+><A
+NAME="AEN108"
+></A
+><H2
+>Copyright</H2
+><P
+><SPAN
+CLASS="APPLICATION"
+>NGLister</SPAN
+> and this manual, are Copyright &copy; 2003 John Goerzen.</P
+><P
+>	This program is free software; you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation; either version 2 of the License, or
+	(at your option) any later version.
+      </P
+><P
+>	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+      </P
+><P
+>	You should have received a copy of the GNU General Public License
+	along with this program; if not, write to the Free Software
+	Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA</P
+></DIV
+><DIV
+CLASS="REFSECT1"
+><A
+NAME="AEN115"
+></A
+><H2
+>Author</H2
+><P
+><SPAN
+CLASS="APPLICATION"
+>NGLister</SPAN
+> its libraries, documentation, and all included files,
+	was written by John Goerzen <TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:jgoerzen@complete.org"
+>jgoerzen@complete.org</A
+>&#62;</TT
+> and
+	copyright is held as stated in the COPYRIGHT section.
+      </P
+><P
+>	<SPAN
+CLASS="APPLICATION"
+>NGLister</SPAN
+> may be downloaded from the
+	<A
+HREF="http://svn.complete.org/"
+TARGET="_top"
+>Subversion repository</A
+>
+	or from the <A
+HREF="http://packages.debian.org/unstable/news/nglister.html"
+TARGET="_top"
+>Debian package page</A
+>.
+      </P
+></DIV
+><DIV
+CLASS="REFSECT1"
+><A
+NAME="AEN124"
+></A
+><H2
+>See Also</H2
+><P
+><SPAN
+CLASS="APPLICATION"
+>slrn</SPAN
+>(1),
+	<SPAN
+CLASS="APPLICATION"
+>python</SPAN
+>(1)
+      </P
+></DIV
+></DIV
+></BODY
+></HTML
+>
