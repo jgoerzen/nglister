@@ -35,7 +35,7 @@ build-stamp: configure-stamp
 	dh_testdir
 
 	# Add here commands to compile the package.
-	$(MAKE)
+	python setup.py build
 	#/usr/bin/docbook-to-man debian/nglister.sgml > nglister.1
 
 	touch build-stamp
@@ -57,15 +57,14 @@ install: build
 	dh_installdirs
 
 	# Add here commands to install the package into debian/nglister.
-	$(MAKE) install DESTDIR=$(CURDIR)/debian/nglister
+	#$(MAKE) install DESTDIR=$(CURDIR)/debian/nglister
+	python setup.py install --root=`pwd`/debian/nglister --no-compile
 
 
-# Build architecture-independent files here.
-binary-indep: build install
+binary-arch: build install
 # We have nothing to do by default.
 
-# Build architecture-dependent files here.
-binary-arch: build install
+binary-indep: build install
 	dh_testdir
 	dh_testroot
 #	dh_installdebconf	
