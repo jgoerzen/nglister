@@ -1,0 +1,12 @@
+Source: nglister
+Section: unknown
+Priority: optional
+Maintainer: John Goerzen <jgoerzen@complete.org>
+Build-Depends: debhelper (>> 3.0.0)
+Standards-Version: 3.5.8
+
+Package: nglister
+Architecture: any
+Depends: ${shlibs:Depends}
+Description: <insert up to 60 chars description>
+ <insert long description, indented with spaces>
